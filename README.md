@@ -1,21 +1,37 @@
-# RAVA: an Open Hardware True Random Number Generator based on Avalanche Noise
+# RAVA8 RNG
+
+[![Website](https://img.shields.io/badge/Website-rava--rng.org-blue)](https://rava-rng.org)
+[![Docs](https://img.shields.io/badge/Docs-docs.rava--rng.org-blue)](https://docs.rava-rng.org)
+[![Author](https://img.shields.io/badge/Author-gabrielguerrer.com-blue)](https://gabrielguerrer.com)
+[![Publication](https://img.shields.io/badge/Publication-IEEE_Express-purple)](https://ieeexplore.ieee.org/document/10295491)
+
+[![Platform](https://img.shields.io/badge/Platform-ATmega32U4-orange)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ![RAVA photo](src/rng_rava_photo.png)
 
-RAVA is an open-source True Random Number Generator (TRNG) designed to offer a transparent and customizable platform, making auditalbe and high-quality entropy accessible to a wider audience. 
-The RAVA device's main characteristics are:
+RAVA is an open-source True Random Number Generator (TRNG) based on avalanche noise. It is designed to offer a transparent and customizable platform that makes auditable,  high-quality entropy accessible to a wider audience. 
 
-- High-quality entropy: Producing unbiased and independent random bits without a post-processing algorithm.
+The main characteristics of the RAVA device are:
 
-- Differential design: Aiming towards immunity to environmental conditions by comparing two similar and independent noise sources.
+- **High-quality entropy**: Produces unbiased and statistically independent random bits directly from physical noise sources, without relying on post-processing algorithms.
 
-- Dual entropy core: Incorporating two parallel and independent entropy channels that simultaneously produce random bytes. The dual design provides redundancy, a double output rate, or a unique feature for experiments employing a condition/control design.
+- **Differential design**: Enhances robustness against environmental influences by continuously comparing two similar and independent noise sources.
 
-- Full transparency: As an open-source project providing complete access to the circuit design, firmware, and user-side software, including drivers, libraries, and utilities.  At the hardware level, monitoring headers allow real-time inspection of voltages and noise sources during operation.
+- **Dual entropy core**: Incorporates two parallel and independent entropy channels that simultaneously produce random bytes. This architecture provides redundancy, a double output rate, or a unique feature for experiments employing a condition/control design.
 
-- Customizability: Offering interface headers for integration with other circuits, sensors, and integrated circuit (IC) components. Users have full control over the device's operation by sending commands through a communication interface. Moreover, as an open-source project, the firmware can be updated to modify the circuit's behavior and implement new functionalities.
+- **Full transparency**: As an open-source project, RAVA provides complete access to the hardware design, firmware, and host-side software, including drivers, libraries, and utilities. At the hardware level, dedicated monitoring headers allow real-time inspection of voltages and noise signals during operation.
 
-- Accessibility: As a discrete circuit employing low-cost IC components and SMD resistors and capacitors of size 0805. Ensuring that the device remains affordable and can be assembled by users through manual soldering of the components to the printed circuit board. 
+- **Customizability**: Interface headers enable integration with external circuits, sensors, and integrated circuits (ICs). Users can fully control device operation through a communication interface, while the open-source firmware can be modified to alter behavior or implement new features.
+
+- **Accessibility**: Built from low-cost, widely available components, including standard ICs and 0805 SMD resistors and capacitors. The design remains affordable and can be assembled by users with basic PCB soldering experience.
+
+
+## RAVA8
+
+This repository contains the hardware design files for RAVA8, an implementation of the RAVA architecture based on the ATmega32U4 microcontroller and its integrated USB interface. The device achieves an unbiased random-bit throughput of 136.0 kbit/s. Included are the schematic and PCB layout files required to manufacture and assemble the board.
+
+<a href="src/rng_rava_schematics.png"><img src="src/rng_rava_schematics.png" width="650"></a>
 
 
 ## Publication
@@ -24,13 +40,6 @@ For a comprehensive overview, encompassing an in-depth exploration of the noise 
 - [IEEE Access, DOI: 10.1109/ACCESS.2023.3327325](https://ieeexplore.ieee.org/document/10295491)
 
 ![IEEE Access article](images/rng_rava_ieee_access.png)
-
-
-## Schematics
-
-The v1.0 implementation is presented as a discrete circuit with an ATmega32U4 microcontroller and a USB interface, achieving an unbiased throughput of 136.0 Kbits/s.
-
-<a href="src/rng_rava_schematics.png"><img src="src/rng_rava_schematics.png" width="650"></a>
 
 
 ## Entropy
@@ -60,20 +69,16 @@ The example reveals nine pulses in the sampling interval of 3 mus that would res
 
 ## Documentation
 
-- [RAVA ‐ Assembling and Inspecting](https://github.com/gabrielguerrer/rng_rava/wiki/RAVA-Device-%E2%80%90-Assembling-and-Inspecting)
-- [RAVA Firmware ‐ Installation](https://github.com/gabrielguerrer/rng_rava_firmware/wiki/RAVA-Firmware-%E2%80%90-Installation)
-- [RAVA Firmware ‐ How it works](https://github.com/gabrielguerrer/rng_rava_firmware/wiki/RAVA-Firmware-%E2%80%90-How-it-works)
-- [RAVA Python Driver - Installation and Usage](https://github.com/gabrielguerrer/rng_rava_driver_py)
-- [RAVA Python Diagnostics - Statistical Tests](https://github.com/gabrielguerrer/rng_rava_diagnostics_py/wiki/Statistical-Tests)
+- [RAVA8 ‐ Assembling and Inspecting](https://github.com/gabrielguerrer/rava8_rng/wiki/RAVA-Device-%E2%80%90-Assembling-and-Inspecting)
 
 ## Associated projects
 
-- [RAVA Firmware](https://github.com/gabrielguerrer/rng_rava_firmware)
-- [RAVA Python Driver](https://github.com/gabrielguerrer/rng_rava_driver_py)
-- [RAVA Python Diagnostics](https://github.com/gabrielguerrer/rng_rava_diagnostics_py)
+- [RAVA8 Firmware](https://github.com/gabrielguerrer/rava8_rng_firmware)
+- [RAVA Python Driver](https://github.com/gabrielguerrer/rava_driver_py)
+- [RAVA Python Diagnostics](https://github.com/gabrielguerrer/rava_diagnostics_py)
 
 ## Contact
 
-gabrielguerrer [at] gmail [dot] com
+[gabrielguerrer.com](https://gabrielguerrer.com/en/gabriel/)
 
-![RAVA logo](images/rng_rava_logo.png)
+[![RAVA logo](images/rng_rava_logo.png)](https://rava-rng.org)
