@@ -29,7 +29,7 @@ The main characteristics of the RAVA device are:
 
 ## RAVA8
 
-This repository contains the hardware design files for RAVA8, an implementation of the RAVA architecture based on the ATmega32U4 microcontroller and its integrated USB interface. The device achieves an unbiased random-bit throughput of 136.0 kbit/s. Included are the schematic and PCB layout files required to manufacture and assemble the board.
+This repository contains the hardware design files for RAVA8, an implementation of the RAVA architecture based on the ATmega32U4 microcontroller and its integrated USB interface. Included are the schematic and PCB layout files required to manufacture and assemble the board. The name *RAVA8* refers to the microcontroller's 8-bit architecture.
 
 <a href="src/rng_rava_schematics.png"><img src="src/rng_rava_schematics.png" width="650"></a>
 
